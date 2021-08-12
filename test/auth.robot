@@ -9,7 +9,7 @@ ${base_url}     https://staging.misteralad.in
 *** Test Cases ***
 Auth Test
     create session  session     ${base_url}
-    ${body}=    create dictionary   email=ricky.gunawan@misteraladin.com      password=123456
+    ${body}=    create dictionary   email=    password=
     ${header}=    create dictionary    Content-Type=application/x-www-form-urlencoded
     ${response}=    post request     session     /api/activities/auth/login      headers=${header}   data=${body}
     log to console  ${response.status_code}
